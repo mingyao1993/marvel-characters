@@ -21,7 +21,7 @@ def is_databricks():
 
 if not is_databricks():
     load_dotenv()
-    profile = os.environ["PROFILE"]
+    profile = "DEFAULT"
     mlflow.set_tracking_uri(f"databricks://{profile}")
     mlflow.set_registry_uri(f"databricks-uc://{profile}")
 
